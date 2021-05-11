@@ -46,9 +46,43 @@ class MyGen():
         raise StopIteration 
 
 
-gen = MyGen(0,100)
-for i in gen:
-    print(i)
+# gen = MyGen(0,100)
+# for i in gen:
+#     print(i)
 
+# fibonacci numbers in generator and in list
+
+def fib(number):
+    a = 0 
+    b = 1 
+    for i in range(number):
+       yield a
+       temp = a
+       a = b 
+       b = temp + b
+
+for x in fib(10000):
+    print(x)
+
+
+def fib2(number):
+    a = 0 
+    b = 1 
+    result = []
+    for i in range(number):
+       result.append(a)
+       temp = a
+       a = b 
+       b = temp + b
+    return result
+
+# print(fib2(20))
+
+
+
+ 
+
+# def fib(n):
+#     range(n)
 
 
