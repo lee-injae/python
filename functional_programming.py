@@ -1,10 +1,22 @@
 from functools import reduce
 
+
+def multiply_by2(li): 
+    new_list = []
+    for item in li:
+        new_list.append(item*2)
+    return new_list
+
+# map, filter, zip, and reduce 
+
+print(map(multiply_by2, [1,2,3]))
+
 my_list = [1,2,3]
 u_list = [10,20,30]
 t_list = (5,4,3)
-def multiply_by2(item): 
-    return item*2
+
+# def multiply_by2(item): 
+#     return item*2
 
 # print(multiply_by2([1,2,3]))
 
