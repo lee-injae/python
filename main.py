@@ -408,10 +408,19 @@
 import functional_programming
 import shopping.shopping_cart
 
-print(functional_programming.multiply_by2([3,4]))
-print(shopping.shopping_cart.buy('pencil'))
+# print(functional_programming.multiply_by2([3,4]))
+# print(shopping.shopping_cart.buy('pencil'))
 
+def dostuff(num=0):
+  try:
+    if num or num == 0:
+      return int(num) + 5
+    else:
+      return 'please enter number' 
+  except ValueError as err:
+    return err
 
+print(dostuff(4))
 
 
 
