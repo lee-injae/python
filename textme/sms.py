@@ -7,7 +7,7 @@ client = Client(account_sid, auth_token)
 message = client.messages.create(  
                               messaging_service_sid='MG01151a06da6d7aabc4c4afd8e1ca1f56',       
                               body='this is so COOL',
-                              to='+1999999999' 
+                              to='+1999999989' 
                           ) 
  
 print(message.sid)
