@@ -9,7 +9,7 @@ soup = BeautifulSoup(res.text, 'html.parser')
 links = soup.select('.storylink')
 # votes = soup.select('.score')
 subtext = soup.select('.subtext')
-dd
+ds
 def create_custom_hn(links, subtext):
     hn = []
     for idx, item in enumerate(links):
