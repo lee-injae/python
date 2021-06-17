@@ -2,20 +2,17 @@ from flask import Flask, render_template, url_for
 app = Flask(__name__)
 print((__name__))
 
-@app.route('/<username>/<int:post_id>')
-def hello_world(username=None, post_id=None):
-    return render_template('index.html', name=username, post_id=post_id)
+@app.route('/')
+def my_home():
+    return render_template('index.html')
 
-@app.route('/blog')
-def blog():
-    return 'this is the blog'
+@app.route('/<string:page_name>')
+def html_page(page_name):
+    return render_template(page_name)
 
-@app.route('/blog')
-def blog2():
-    return 'this is my dog'
+# @app.route('/components.html')
+# def components():
+#     return render_template('components.html')
 
-@app.route('/about.html')
-def about():
-    return render_template('about.html')
 
 
